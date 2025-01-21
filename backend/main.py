@@ -9,16 +9,19 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3001",  # Permitir para entorno de desarrollo local
-        "https://todo-frontend-navy-eight.vercel.app"  # Permitir para Vercel
+        "http://localhost:3001",  # Para desarrollo local
+        "https://todo-frontend-qsyfbveki-gabriel-masris-projects.vercel.app"  # URL de Vercel
     ],
     allow_credentials=True,
-    allow_methods=["*"],  # Permitir todos los métodos (GET, POST, etc.)
-    allow_headers=["*"],  # Permitir todos los headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
 
 
 # Modelos Pydantic
