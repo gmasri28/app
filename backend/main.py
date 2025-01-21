@@ -11,7 +11,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3001"],  # Permitir origen del frontend
+    allow_origins=[
+        "http://localhost:3001",  # Permitir para entorno de desarrollo local
+        "https://todo-frontend-navy-eight.vercel.app"  # Permitir para Vercel
+    ],
     allow_credentials=True,
     allow_methods=["*"],  # Permitir todos los métodos (GET, POST, etc.)
     allow_headers=["*"],  # Permitir todos los headers
