@@ -16,12 +16,12 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3001",  # Para desarrollo local
         "https://todo-frontend-qsyfbveki-gabriel-masris-projects.vercel.app"  # URL de Vercel
+        "https://todo-frontend-navy-eight.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 # Modelos Pydantic
