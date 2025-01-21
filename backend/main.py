@@ -91,4 +91,4 @@ def delete_task(id: str, db: Session = Depends(get_db)):
 
 @app.get("/")
 def root():
-    return {"message": "API funcionando"}
+    return {"message": "APIPP funcionando"}
